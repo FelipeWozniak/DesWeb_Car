@@ -1,0 +1,225 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e8ffee, #006432);
+  margin: 30px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200vh; /* Cobrir a altura da janela */
+}
+
+/* Logo */ 
+.logo {
+  position: fixed; /* Posiciona o logo em relação ao canto da página */
+  top: 0; /* Distância do topo */
+  left: 0; /* Distância da esquerda */
+  width: 700px; /* Tamanho do logo */
+  height: auto; /* Mantém a proporção da imagem */
+  z-index: 1000;
+  padding: 10px;
+  
+}
+
+.logo img {
+  width: 100%; /* Faz a imagem preencher o tamanho definido no container */
+  height: auto;
+}
+
+/* Container do formulário */
+.form-container {
+  background-color: #0fb180;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  width: 300px;
+  margin: auto; /* Centraliza o container */
+}
+
+.form-container div {
+  display: block;
+  margin-bottom: 15px;
+  color: #fff; /* Altera a cor do texto */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Estiliza os inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="password"],
+input[type="date"],
+input[type="color"],
+input[type="number"],
+input[type="range"] {
+  background-color: rgba(170, 11, 11, 0.1);
+  width: 100%; /* Alinha os campos para ocupar toda a largura do container */
+  padding: 8px;
+  border: 2px solid #23b69d;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Estilo para select e textarea */
+select,
+textarea {
+  background-color: rgba(255, 255, 255, 0.10);
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #23b69d;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Grupo de checkboxes */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+}
+
+/* Ações do formulário */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilo dos botões */
+input[type="submit"],
+input[type="reset"] {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Botão de submit */
+input[type="submit"] {
+  background-color: #54b910;
+  color: white;
+}
+
+/* Botão de reset */
+input[type="reset"] {
+  background-color: #ac3333;
+  color: rgb(2, 2, 2);
+}
+
+/* Fonte Comic Sans para elementos específicos */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+/* Estilo personalizado para os botões ghost */
+.btn-outline-primary {
+  color: #0c6639; /* Cor do texto */
+  border-color: #146d3c; /* Cor da borda */
+}
+
+.btn-outline-primary:hover {
+  background-color: #468358; /* Cor de fundo ao passar o mouse */
+  color: rgb(3, 54, 5); /* Cor do texto ao passar o mouse */
+}
+
+
+/* Estilo personalizado para os botões grandes e destacados com fundo verde */
+.btn-custom {
+  background-color: #28a745; /* Fundo verde */
+  color: white; /* Cor do texto */
+  border: 2px solid #28a745; /* Borda verde */
+  font-size: 1.25rem; /* Tamanho do texto */
+  padding: 15px 25px; /* Tamanho do botão */
+  border-radius: 8px; /* Cantos arredondados */
+  font-weight: bold; /* Texto em negrito */
+}
+
+.btn-custom:hover {
+  background-color: #218838; /* Fundo verde mais escuro ao passar o mouse */
+  border-color: #1e7e34; /* Borda verde mais escura ao passar o mouse */
+}
+
+.btn-check:checked + .btn-custom {
+  background-color: #1e7e34; /* Fundo verde mais escuro quando selecionado */
+  border-color: #1e7e34; /* Borda verde mais escura quando selecionado */
+}
+
+/* Splash screen */ 
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* cor do fundo */
+  display: flex;
+  flex-direction: column; /* Define a disposição vertical dos elementos */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 10s forwards;
+}
+
+#loading-screen h1 {
+  font-size: 2rem;
+  color: #1e7e34;   /*Altera a cor da mensagem */
+}
+#loading-screen h2 {
+  font-size: 2rem;
+  color: #1e7e34;
+}
+/* Animação para esconder a splash screen */
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+
+/* Exibe o conteúdo da página depois */
+#main-content {
+  opacity: 0;
+  animation: fadeIn 5s 5s forwards; /* Atraso de segundos */
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+.plottexto{
+  position: absolute; /* Posiciona o logotxt em relação ao canto da página */
+  top: 50px; /* Distância do topo */
+  left: 1500px; /* Distância da esquerda */
+  width: 300px; /* Tamanho do txt */
+  height: auto; /* Mantém a proporção da imagem */
+  z-index: 1000;
+  padding: 10px;
+}

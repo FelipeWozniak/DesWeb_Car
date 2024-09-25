@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../DESWEB_CARS/CSS/DESWEB_CARS_CSS.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="logo">
+        <img src="../DESWEB_CARS/IMAGENS/logo3.png" alt="Logo">
+    </div>
+    <div class="plottexto">
+        
+        <p></p>
+
+    </div>
+
+    <div class="modal-fade">
+        
+        <form class="form-container">
+            
+
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" maxlength="20" required>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="fone">Celular com DDD</label>
+                <input type="tel" id="fone" name="fone" required pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11 99999-9999">
+            </div>
+
+            <div>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+
+            <div>
+                <label for="dtnasc">Data Nasc</label>
+                <input type="date" id="dtnasc" name="dtnasc" required>
+            </div>
+
+            <div>
+                <p>Sexo</p>
+                <div class="bdn-group" role="group" arial-label="Sexo">
+                    <input type="radio" id="Sexo-M" name="Sexo" value="Masculino" class="btn btn-primary" >
+                    <label for="Sexo-M" class="btn btn-custom">Masculino</label>
+                </div>
+                <div class="bdn-group" role="group" arial-label="Sexo">
+                    <input type="radio" id="Sexo-F" name="Sexo" value="Feminino" class="btn btn-primary">
+                    <label for="Sexo-F" class="btn btn-custom">Feminino</label>
+                </div>
+                <div class="bdn-group" role="group" arial-label="Sexo">
+                    <input type="radio" id="outro" name="Sexo" value="outro" class="btn btn-primary">
+                    <label for="outro" class="btn btn-custom">Outro</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado">
+                    <option value="SP">SP</option>
+                    <option value="RJ">RJ</option>
+                    <option value="PB">PB</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="cep">Cep:</label>
+                <input name="cep" type="text" id="cep" class="mascCEP" size="10" maxlength="9" onblur="pesquisacep(this.value);"/>
+            </div>
+
+            <div>
+                <label for="rua">Rua:</label>
+                <input name="rua" type="text" id="rua" size="30" disabled/>
+                <label for="num">Nº:</label>
+                <input name="num" type="text" id="num" size="20" >
+            </div>
+
+            <div>
+                <label for="bairro">Bairro:</label>
+                <input name="bairro" type="text" id="bairro" size="40" disabled/>
+            </div>
+
+            <div>
+                <label for="uf">Estado:</label>
+                <input name="uf" type="text" id="uf" size="2"/>
+            </div>
+
+            <div>
+                <label for="msg">Descrição:</label><br>
+                <textarea name="msg" id="msg" rows="4" cols="35"></textarea>
+            </div>
+
+            <div>
+                <div class="btn-group" role="group" aria-label="Veículos">
+                    <p>Veículos</p>
+                    <input type="checkbox" class="btn-check" id="carro" name="meio_transporte" value="carro" autocomplete="off">
+                    <label class="btn btn-custom" for="carro">Carro</label>
+            
+                    <input type="checkbox" class="btn-check" id="moto" name="meio_transporte" value="moto" autocomplete="off">
+                    <label class="btn btn-custom" for="moto">Moto</label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Enviar">
+            </div>
+           
+        </form>
+    </div>
+</body>
+</html>
